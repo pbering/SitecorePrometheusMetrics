@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>32b5480f-2a88-4011-b43f-5693bf9d7c6f</ProjectGuid>
     <DockerLaunchBrowser>True</DockerLaunchBrowser>
-    <DockerServiceUrl>http://{ServiceIPAddress}</DockerServiceUrl>
+    <DockerServiceUrl>http://{ServiceIPAddress}/metrics</DockerServiceUrl>
     <DockerServiceName>webapp</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
