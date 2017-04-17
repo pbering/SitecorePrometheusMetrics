@@ -35,6 +35,20 @@ namespace SitecorePrometheusMetrics.Core
                 context.Response.Write(metric);
             }
 
+            foreach (var counter in Metrics.Instance.GetGauges())
+            {
+                // TODO: Rendering should be as in "SitecoreCacheMetric"
+                var line = "#TYPE " + counter.Key + " gauge\n" + counter.Key + " " + counter.Value + "\n";
+
+                context.Response.Write(line);
+            }
+
+            // TODO: Get Metrics.Instance.GetCounters
+
+            // TODO: How about labels?
+
+            // TODO: Merge counters and gauges?
+
             context.ApplicationInstance.CompleteRequest();
         }
     }
