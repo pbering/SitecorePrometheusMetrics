@@ -1,4 +1,4 @@
-FROM chreg-pmbcodehouse392.azurecr.io/sitecore:8.2.161221.0
+FROM chreg-pmbcodehouse392.azurecr.io/sitecore:8.2.170407.0
 
 ARG source
 
