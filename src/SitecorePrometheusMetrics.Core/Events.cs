@@ -8,6 +8,18 @@ namespace SitecorePrometheusMetrics.Core
 {
     public class Events
     {
+        private readonly string _countName;
+        private readonly string _durationName;
+
+        public Events()
+        {
+            _durationName = "sitecore_publish_duration_milliseconds";
+            _countName = "sitecore_publish_total";
+
+            Metrics.Instance.ZeroGauge(_durationName);
+            Metrics.Instance.ZeroCounter(_countName);
+        }
+
         public void PublishComplete(object sender, EventArgs args)
         {
             var now = DateTime.UtcNow;
@@ -15,11 +27,9 @@ namespace SitecorePrometheusMetrics.Core
             var options = (IEnumerable<DistributedPublishOptions>)eventArgs.Parameters[0];
             var publishOptions = options.First();
             var start = publishOptions.PublishDate;
-            var name = "sitecore_publish_duration_milliseconds";
 
-            // TODO: Verify that timing is correct
-
-            Metrics.Instance.Set(name, Convert.ToInt64(now.Subtract(start).TotalMilliseconds));
+            Metrics.Instance.Set(_durationName, Convert.ToInt64(now.Subtract(start).TotalMilliseconds));
+            Metrics.Instance.Increment(_countName);
         }
     }
 }

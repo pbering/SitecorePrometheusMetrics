@@ -5,12 +5,12 @@ namespace SitecorePrometheusMetrics.Core
 {
     internal class SitecoreCacheMetric
     {
-        private static readonly string _prefix = "sitecore_cache_";
+        private static readonly string _prefix = "sitecore_cachestats_";
         private static readonly string _newLine = "\n";
         private readonly string _originalName;
         private string _name;
 
-        public SitecoreCacheMetric(ICacheInfo cache) : this(cache.Name.ToLowerInvariant(), cache.Count, cache.Size)
+        public SitecoreCacheMetric(ICacheInfo cache) : this(cache.Name, cache.Count, cache.Size)
         {
         }
 
@@ -54,7 +54,7 @@ namespace SitecorePrometheusMetrics.Core
 
             content.AppendFormat("#TYPE {0} gauge", objectsName);
             content.AppendFormat("{0}", _newLine);
-            content.AppendFormat("{0}{{key=\"{1}\"}}", objectsName, _originalName);
+            content.AppendFormat("{0}{{name=\"{1}\"}}", objectsName, _originalName);
             content.AppendFormat(" {0}", Count);
             content.AppendFormat("{0}", _newLine);
 
@@ -62,7 +62,7 @@ namespace SitecorePrometheusMetrics.Core
 
             content.AppendFormat("#TYPE {0} gauge", bytesName);
             content.AppendFormat("{0}", _newLine);
-            content.AppendFormat("{0}{{key=\"{1}\"}}", bytesName, _originalName);
+            content.AppendFormat("{0}{{name=\"{1}\"}}", bytesName, _originalName);
             content.AppendFormat(" {0}", Size);
             content.AppendFormat("{0}", _newLine);
 

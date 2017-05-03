@@ -44,10 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SitecorePerformanceCounterLoader.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Metrics.cs" />
     <Compile Include="MetricsRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SitecorePerformanceCounterMetric.cs" />
     <Compile Include="SitecoreCacheMetric.cs" />
   </ItemGroup>
   <ItemGroup>

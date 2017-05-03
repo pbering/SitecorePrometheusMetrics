@@ -100,9 +100,7 @@
     <Content Include="App_Config\Include\SitecorePrometheusMetrics.Endpoint.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\SitecorePrometheusMetrics.CM.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="App_Config\Include\SitecorePrometheusMetrics.CM.config" />
     <None Include="Dockerfile" />
     <None Include=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>

@@ -9,13 +9,13 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecorePrometheusMetrics.Core", "src\SitecorePrometheusMetrics.Core\SitecorePrometheusMetrics.Core.csproj", "{23E6B9B4-ACB3-4EAA-B5C6-FC86292F30E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecorePrometheusMetrics.Tests", "src\SitecorePrometheusMetrics.Tests\SitecorePrometheusMetrics.Tests.csproj", "{3ACBE58F-6167-40EA-9F7E-1633D70812C9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FCB964A4-EB0E-4D5B-B742-A8D10825F238}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		nuget.config = nuget.config
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecorePrometheusMetrics.Tests", "src\SitecorePrometheusMetrics.Tests\SitecorePrometheusMetrics.Tests.csproj", "{3ACBE58F-6167-40EA-9F7E-1633D70812C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

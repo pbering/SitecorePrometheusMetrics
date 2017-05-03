@@ -40,6 +40,16 @@ namespace SitecorePrometheusMetrics.Core
             _counters.AddOrUpdate(name, 1, (key, value) => value + 1);
         }
 
+        public void ZeroCounter(string name)
+        {
+            _counters.TryAdd(name, 0);
+        }
+
+        public void ZeroGauge(string name)
+        {
+            _gauges.TryAdd(name, 0);
+        }
+
         public void Set(string name, long value)
         {
             _gauges.AddOrUpdate(name, value, (key, current) => value);
