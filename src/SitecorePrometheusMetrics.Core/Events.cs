@@ -14,7 +14,7 @@ namespace SitecorePrometheusMetrics.Core
         public Events()
         {
             _durationName = "sitecore_publish_duration_milliseconds";
-            _countName = "sitecore_publish_total";
+            _countName = "sitecore_publish_count";
 
             Metrics.Instance.ZeroGauge(_durationName);
             Metrics.Instance.ZeroCounter(_countName);
