@@ -1,4 +1,4 @@
-FROM chreg-pmbcodehouse392.azurecr.io/sitecore:8.2.170407.3
+FROM registry.codehouse.com/sitecore:8.2.170407.3
 
 ARG source
 
