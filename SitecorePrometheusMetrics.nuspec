@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SitecorePrometheusMetrics</id>
+    <version>1.0.0</version>
+    <title>SitecorePrometheusMetrics</title>
+    <authors>Per Manniche Bering</authors>
+    <owners>Per Manniche Bering</owners>
+    <licenseUrl>https://github.com/pbering/SitecorePrometheusMetrics/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/pbering/SitecorePrometheusMetrics</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Outputs Sitecore performance counters and more as Prometheus metrics</description>
+    <tags>Sitecore Prometheus</tags>
+  </metadata>
+  <files>
+    <file src="src\SitecorePrometheusMetrics.Core\bin\Release\SitecorePrometheusMetrics.Core.dll" target="lib\net452" />
+    <file src="src\WebApp\App_Config\Include\SitecorePrometheusMetrics.Endpoint.config" target="content\App_Config\Include" />
+    <file src="src\WebApp\App_Config\Include\SitecorePrometheusMetrics.CM.config" target="content\App_Config\Include" />
+  </files>
+</package>
