@@ -37,7 +37,7 @@ namespace SitecorePrometheusMetrics.Core
             var hostname = Environment.MachineName.ToLowerInvariant();
 
             context.Response.Write(string.Format(_titleFormat, "Meta metrics"));
-            context.Response.Write("#TYPE os_hostname counter\nos_hostname{name=\"" + hostname + "\"} 1\n");
+            context.Response.Write("#TYPE sitecore_os_hostname counter\nsitecore_os_hostname{name=\"" + hostname + "\"} 1\n");
 
             context.Response.Write(string.Format(_titleFormat, "Custom metrics"));
 
