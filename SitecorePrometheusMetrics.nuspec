@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SitecorePrometheusMetrics</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>SitecorePrometheusMetrics</title>
     <authors>Per Manniche Bering</authors>
     <owners>Per Manniche Bering</owners>

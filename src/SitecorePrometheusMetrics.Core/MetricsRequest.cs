@@ -34,6 +34,11 @@ namespace SitecorePrometheusMetrics.Core
             // The version is the prometheus protocol version
             context.Response.ContentType = "text/plain; version=0.0.4";
 
+            var hostname = Environment.MachineName.ToLowerInvariant();
+
+            context.Response.Write(string.Format(_titleFormat, "Meta metrics"));
+            context.Response.Write("#TYPE " + hostname + " counter\n" + hostname + " 1\n");
+
             context.Response.Write(string.Format(_titleFormat, "Custom metrics"));
 
             foreach (var counter in Metrics.Instance.GetGauges())
